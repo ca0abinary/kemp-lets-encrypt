@@ -1,5 +1,5 @@
 FROM alpine
-RUN apk --update add curl certbot nginx supervisor && \
+RUN apk --update add openssl curl certbot nginx supervisor && \
 	mkdir -p /etc/letsencrypt/configs/ && \
 	mkdir -p /var/www/letsencrypt && \
 	mkdir -p /run/nginx && \
