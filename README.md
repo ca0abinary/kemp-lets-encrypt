@@ -9,7 +9,7 @@ The bound `/etc/letsencrypt/configs` folder should have:
 The *.post.sh files should be executable (`chmod +x *.post.sh`) and look roughly like so:
 ```
 #!/bin/sh
-DIR=`ls -1t /etc/letsencrypt/live/my.domain* | head -n1 | cut -d ':' -f1`
+DIR=`ls -1dt /etc/letsencrypt/live/my.domain* | head -n1`
 CERT="$DIR/cert.pem"
 KEY="$DIR/privkey.pem"
 
