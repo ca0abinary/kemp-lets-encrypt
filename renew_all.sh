@@ -9,7 +9,7 @@ do
                 sh -c "$conf.pre.sh"
         fi
 
-        certbot --config "$conf.conf" --expand --non-interactive certonly
+        certbot --config "$conf.conf" --expand --non-interactive --server https://acme-v02.api.letsencrypt.org/directory certonly
 
         if [ -f "$conf.post.sh" ]; then
                 sh -c "$conf.post.sh"
