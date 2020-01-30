@@ -1,5 +1,6 @@
 #!/bin/sh
-CONFIGS=$(find /etc/letsencrypt/configs/ -iname "*.conf" | sed s/.conf$//g)
+cd /etc/letsencrypt/configs/
+CONFIGS=$(find . -iname "*.conf" | sed s/.conf$//g)
 
 for conf in $CONFIGS
 do
